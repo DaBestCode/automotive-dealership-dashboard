@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/drive-dynamics-app/",
+  base: mode === 'production' ? './' : "/drive-dynamics-app/", // Use relative paths for production
   server: {
     host: "::",
     port: 8080,
